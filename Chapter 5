@@ -699,6 +699,217 @@ public class Main {
 
         } */
 
+        //No.36
+        /*System.out.print("Enter the first 12 digits of an ISBN-13 as a string: ");
+        String isbn = input.nextLine();
+
+        if (isbn.length() != 12) {
+            System.out.println(isbn + " is an invalid input");
+            return;
+        }
+
+        int sum = 0;
+        for (int i = 0; i < 12; i++) {
+            int digit = Character.getNumericValue(isbn.charAt(i));
+            sum += (i % 2 == 0) ? digit : 3 * digit;
+        }
+
+        int checksum = 10 - (sum % 10);
+        if (checksum == 10) checksum = 0;
+
+        System.out.println("The ISBN-13 number is " + isbn + checksum); */
+
+        //No.37
+        /*System.out.print("Enter a decimal integer: ");
+        int decimal = input.nextInt();
+
+        String binary = "";
+        while (decimal > 0) {
+            binary = (decimal % 2) + binary;
+            decimal /= 2;
+        }
+
+        System.out.println("Binary value: " + binary); */
+
+        //No.38
+        /*System.out.print("Enter a decimal integer: ");
+        int decimal = input.nextInt();
+
+        String octal = "";
+        while (decimal > 0) {
+            octal = (decimal % 8) + octal;
+            decimal /= 8;
+        }
+        System.out.println("Octal value: " + octal); */
+
+        //No.39
+        /*double commissionSought = 30000;
+        double baseSalary = 5000;
+        double commission = 0;
+        double salesAmount = 0;
+
+        while (commission < commissionSought) {
+            salesAmount += 0.01;
+            commission = 0;
+
+            if (salesAmount > 10000) {
+                commission += (salesAmount - 10000) * 0.12;
+                salesAmount = 10000;
+            }
+            if (salesAmount > 5000) {
+                commission += (salesAmount - 5000) * 0.10;
+                salesAmount = 5000;
+            }
+            commission += salesAmount * 0.08;
+        }
+
+        System.out.printf("Minimum sales needed: $%.2f\n", salesAmount); */
+
+        //No.40
+        /*int heads = 0, tails = 0;
+        for (int i = 0; i < 1000000; i++) {
+            if (Math.random() < 0.5) heads++;
+            else tails++;
+        }
+        System.out.println("Heads: " + heads + ", Tails: " + tails); */
+
+        //No.41
+        /*System.out.print("Enter numbers: ");
+        int max = 0, count = 0, num;
+
+        do {
+            num = input.nextInt();
+            if (num == 0) break;
+            if (num > max) {
+                max = num;
+                count = 1;
+            } else if (num == max) {
+                count++;
+            }
+        } while (num != 0);
+
+        if (max == 0) {
+            System.out.println("No numbers are entered except 0");
+        } else {
+            System.out.println("The largest number is " + max);
+            System.out.println("The occurrence count of the largest number is " + count);
+        } */
+
+        //No.42
+        /*System.out.print("Enter the commission sought: ");
+        double commissionSought = input.nextDouble();
+        double baseSalary = 5000;
+        double commission = 0;
+        double salesAmount = 0;
+
+        for (; commission < commissionSought; salesAmount += 0.01) {
+            commission = 0;
+            double tempSales = salesAmount;
+
+            if (tempSales > 10000) {
+                commission += (tempSales - 10000) * 0.12;
+                tempSales = 10000;
+            }
+            if (tempSales > 5000) {
+                commission += (tempSales - 5000) * 0.10;
+                tempSales = 5000;
+            }
+            commission += tempSales * 0.08;
+        }
+
+        System.out.printf("Minimum sales needed: $%.2f\n", salesAmount); */
+
+        //No.43
+        /*int count = 0;
+        for (int i = 1; i <= 7; i++) {
+            for (int j = i + 1; j <= 7; j++) {
+                System.out.println(i + " " + j);
+                count++;
+            }
+        }
+        System.out.println("The total number of all combinations is " + count); */
+
+        //No.44
+        System.out.print("Enter an integer: ");
+        short num = input.nextShort();
+
+        System.out.print("The bits are ");
+        for (int i = 15; i >= 0; i--) {
+            System.out.print((num >> i) & 1);
+        }
+        System.out.println();
+
+        //No.46
+        /*System.out.print("Enter a string: ");
+        String str = input.nextLine();
+
+        String reversed = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed += str.charAt(i);
+        }
+
+        System.out.println("The reversed string is " + reversed); */
+
+        //No.47
+        /*System.out.print("Enter the first 12 digits of an ISBN-13 as a string: ");
+        String isbn = input.nextLine();
+
+        if (isbn.length() != 12) {
+            System.out.println(isbn + " is an invalid input");
+            return;
+        }
+
+        int sum = 0;
+        for (int i = 0; i < 12; i++) {
+            int digit = Character.getNumericValue(isbn.charAt(i));
+            sum += (i % 2 == 0) ? digit : 3 * digit;
+        }
+
+        int checksum = 10 - (sum % 10);
+        if (checksum == 10) checksum = 0;
+
+        System.out.println("The ISBN-13 number is " + isbn + checksum); */
+
+        //No.48
+        /*System.out.print("Enter a string: ");
+        String str = input.nextLine();
+
+        for (int i = 0; i < str.length(); i += 2) {
+            System.out.print(str.charAt(i));
+        }
+        System.out.println(); */
+
+        //No.49
+        /*System.out.print("Enter a string: ");
+        String str = input.nextLine().toLowerCase();
+
+        int vowels = 0, consonants = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch >= 'a' && ch <= 'z') {
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            }
+        }
+
+        System.out.println("The number of vowels is " + vowels);
+        System.out.println("The number of consonants is " + consonants); */
+
+        //No.50
+        /*System.out.print("Enter a string: ");
+        String str = input.nextLine();
+
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (Character.isUpperCase(str.charAt(i))) {
+                count++;
+            }
+        }
+
+        System.out.println("The number of uppercase letters is " + count); */
 
 
 
