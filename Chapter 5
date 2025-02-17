@@ -579,6 +579,24 @@ public class Main {
             firstDay = (firstDay + daysInMonth[month]) % 7;
         } */
 
+        //No.30
+        /*System.out.print("Enter the monthly saving amount: ");
+        double amount = input.nextDouble();
+        System.out.print("Enter the annual interest rate (e.g., 5 for 5%): ");
+        double annualInterestRate = input.nextDouble();
+        System.out.print("Enter the number of months: ");
+        int months = input.nextInt();
+
+        double monthlyInterestRate = annualInterestRate / 1200;
+        double totalAmount = 0;
+
+        for (int i = 1; i <= months; i++) {
+            totalAmount = (amount + totalAmount) * (1 + monthlyInterestRate);
+            System.out.printf("Amount after month %d: $%.2f\n", i, totalAmount);
+        } */
+
+        //No.31
+
         //No.35
         /*for (int i = 1; i < 625;i++) {
             double sum = 0.0D;
